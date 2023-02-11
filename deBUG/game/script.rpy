@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define roachie = Character("Roachie", color="#FF927A")
+define roachie = Character("Roachie", color="#e46e53")
 define spidey = Character("Spidey", color="#3426B1") 
 define fade = Fade(0.5, 0, 0.5)
 
