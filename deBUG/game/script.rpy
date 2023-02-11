@@ -7,7 +7,7 @@ define roachie = Character("Roachie", color="#e46e53")
 define spidey = Character("Spidey", color="#3426B1") 
 define fade = Fade(0.5, 0, 0.5)
 init:
-    image roachie normal = Image("roachie normal.png")
+    image roachie default = Image("roachie default.png")
     image laptop = Image("roachie laptop.png")
     image utdreddit = Image("bg utdreddit.png")
     image mapreddit = Image("bg mapreddit.png")
@@ -29,7 +29,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show roachie normal
+    show roachie default
 
     # These display lines of dialogue.
 
@@ -39,7 +39,7 @@ label start:
 
     roachie "I was always picked on for being a software engineer who is a cockroach. Usually, only butterflies are software engineers . . ."
 
-    hide roachie normal 
+    hide roachie default
 
     #SCENE CHANGE TO THOUGHT BUBBLE AS BUTTERFLY
 
