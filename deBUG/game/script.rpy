@@ -1,4 +1,22 @@
-﻿# The game starts here.
+﻿# The script of the game goes in this file.
+
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.
+
+define roachie = Character("Roachie", color="#FF927A")
+define spidey = Character("Spidey", color="#3426B1") 
+define fade = Fade(0.5, 0, 0.5)
+init:
+    image roachie default = Image("roachie default.png")
+    image laptop = Image("roachie laptop.png")
+    image utdreddit = Image("bg utdreddit.png")
+    image mapreddit = Image("bg mapreddit.png")
+    image roachie delighted = Image("roachie delighted.png")
+    image themap = Image("themap.png")
+
+
+# The game starts here.
+
 label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
