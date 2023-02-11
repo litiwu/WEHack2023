@@ -3,7 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
+define roachie = Character("Roachie", color="#FF927A")
+define spidey = Character("Spidey", color="#3426B1") 
 
 
 # The game starts here.
@@ -20,13 +21,21 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    show roachie default
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    roachie "meow"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    hide roachie default 
+    show spidey default
+
+    spidey "woof"
+
+    show roachie default at right
+
+    roachie "this is us"
+
 
     # This ends the game.
 
