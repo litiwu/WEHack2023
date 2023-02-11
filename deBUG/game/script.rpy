@@ -6,6 +6,13 @@
 define roachie = Character("Roachie", color="#e46e53")
 define spidey = Character("Spidey", color="#3426B1") 
 define fade = Fade(0.5, 0, 0.5)
+init:
+    image roachie normal = Image("roachie normal.png")
+    image laptop = Image("roachie laptop.png")
+    image utdreddit = Image("bg utdreddit.png")
+    image mapreddit = Image("bg mapreddit.png")
+    image roachie delighted = Image("roachie delighted.png")
+    image themap = Image("themap.png")
 
 
 # The game starts here.
@@ -22,7 +29,7 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show roachie default
+    show roachie normal
 
     # These display lines of dialogue.
 
@@ -32,25 +39,27 @@ label start:
 
     roachie "I was always picked on for being a software engineer who is a cockroach. Usually, only butterflies are software engineers . . ."
 
-    hide roachie default 
+    hide roachie normal 
 
     #SCENE CHANGE TO THOUGHT BUBBLE AS BUTTERFLY
 
     roachie "so I always really wanted to become a butterfly!"
 
-    #SCENE CHANGE TO REDDIT BACKGROUND
+    scene laptop
 
     roachie "I searched online for a way to become a butterfly when I came across this post on the UTD forum."
 
+    scene mapreddit
+
     "A life filled with regret . . . can be solved by a magic comet. Follow the map to unlock . . . one wish to be granted by Temoc."
     
-    # SHOW MAP
+    scene themap
 
-    show roachie default
+    show roachie delighted
 
     roachie "I really need this wish to finally be accepted as a normal software engineer, so I set out in search of Temoc, the comet."
 
-    hide roachie default 
+    hide roachie delighted
     with fade
 
     #show roachie default at right
