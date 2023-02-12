@@ -26,6 +26,11 @@ init:
     image ch1 = Image("ch1.png")
     image bg twohours = Image("bg twohours.jpeg")
     image bg utd = Image("bg utd.png")
+    image bg lake = Image("bg lake.png")
+    image spidey doubt = Image("spidey doubt.png")
+    image spidey happy = Image("spidey happy.png")
+    image spidey surprised = Image("spidey surprised.png")
+    image spidey tired = Image("spidey tired.png")
 
 
 # The game starts here.
@@ -78,12 +83,12 @@ label start:
     scene bg twohours
     roachie "{color=#0373fc}{i}After Two Hours{/i}{/color}"
 
-    #scene bg lake
+    scene bg lake
     show roachie default
     roachie "Finally here!"
     roachie "What's going on over there?"
     hide roachie default
-    show susspidey at left
+    show spidey tired at left
     #show three ladybugs at right
     roachie "{color=#0373fc}{i}At the lake, I saw a suspicious spider arguing with three young ladybugs.{/i}{/color}"
     roachie "{color=#0373fc}{i}I should go check if the ladybugs aren't being harassed.{/i}{/color}"
@@ -97,26 +102,28 @@ label start:
     bluey  "Greenie hasn’t even returned my school notebook for a whole week! I don’t want to stay with him even for a second!"
 
     susspidey "So I can’t leave Reddie and Greenie together or Greenie and Bluey together, but I can only take one at a time across the lake . . . what should I do? ugh . . ."
-    hide susspidey
+    hide spidey tired
     #hide three ladybugs
 
-    show susspidey at right
+    show spidey tired at right
     #show roachie ponder at left
     show roachie default at left
     roachie "Wait . . . I think I can help you."
 
+    hide spidey tired
+    show spidey doubt at right
     susspidey "{color=#0373fc}{i}A cockroach? How can a cockroach help me? Oh well, I am out of ideas, anyways. I’m just going to hear out what they have to say.{/i}{/color}"
     susspidey "Okay . . . tell me how to get us across the lake."
 
-    hide susspidey
+    hide spidey doubt
     hide roachie default
 
     #mini game here
     
-    #scene bg lake
-    show susspidey
+    scene bg lake
+    show spidey happy
     susspidey "Thank you so much, cockroach. My kids were being so difficult, but you were able to get them across safely."
-    hide susspidey
+    hide spidey happy
     show roachie default
     roachie "Your kids?"
     hide roachie default
@@ -127,7 +134,7 @@ label start:
     show spidey
     roachie "{color=#0373fc}{i}Wow, I thought spiders were cold and uncaring, but I was making assumptions.{/i}{/color}"
     hide spidey
-    #scene bg lake
+    scene bg lake
     show spidey
     spidey "What's your name?"
     hide spidey
@@ -138,10 +145,10 @@ label start:
     show roachie default
     spidey "{color=#0373fc}{i}I never thought cockroaches could ever become software engineers, but I changed my mind. I didn’t know cockroaches could be so smart!{/i}{/color}"
     hide roachie default
-    #scene bg lake
-    show spidey
+    scene bg lake
+    show spidey surprised
     spidey "Oh my! You definitely have the brains to become a successful software engineer. Why are you traveling all the way out here?"
-    hide spidey
+    hide spidey surprised
     show roachie default
     roachie "{color=#0373fc}{i}Spidey believes I can become a software engineer as a cockroach?{/i}{/color}"
     roachie "Oh . . . I'm trying to find the magic Temoc to grant my wish."
