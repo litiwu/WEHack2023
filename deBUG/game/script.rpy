@@ -3,8 +3,12 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define roachie = Character("Roachie", color="#FF927A")
-define spidey = Character("Spidey", color="#3426B1") 
+define roachie = Character("Roachie", color="#e59d4f")
+define susspidey = Character("Suspicious Spider", color="#ac26b1") 
+define reddie = Character("Reddie", color="#d34949")
+define greenie = Character("Greenie", color="#64af67")
+define bluey = Character("Bluey", color="#559cc3")
+define spidey = Character("Spidey", color="#ac26b1") 
 define fade = Fade(0.5, 0, 0.5)
 init:
     image roachie default = Image("roachie default.png")
@@ -47,15 +51,52 @@ label start:
     scene bg black
     show themap
     roachie "What's this?"
-    "A life filled with regret . . . can be solved by a magic comet. Follow the map to unlock . . . one wish to be granted by Temoc."
+    "{color=#b52b16}{i}A life filled with regret . . . can be solved by a magic comet. Follow the map to unlock . . . one wish to be granted by Temoc.{/i}{/color}"
     hide themap
     show roachie default
     roachie "I really need this wish to finally be accepted as a normal software engineer, so I set out in search of Temoc, the comet."
     hide roachie default 
     hide themap
     with fade
-    show spidey
-    #show roachie default at right
-    #roachie "this is us"
+
+    #show bg chapter 1: logic lake
+
+    scene bg black
+
+    roachie "The first location on the map was Logic Lake, just a few miles east."
+    
+    scene bg twohours
+    roachie "{color=#0373fc}{i}After Two Hours{/i}{/color}"
+
+    #scene bg lake
+    show roachie default
+    roachie "Finally here!"
+    roachie "What's going on over there?"
+    hide roachie default
+    #show susspidey at left and three ladybugs at right
+    roachie "{color=#0373fc}{i}At the lake, I saw a suspicious spider arguing with three young ladybugs.{/i}{/color}"
+    roachie "{color=#0373fc}{i}I should go check if the ladybugs aren't being harassed.{/i}{/color}"
+
+    susspidey "Hey guys, we don’t have much time. Can we please apologize to each other and go?"
+
+    reddie "No way! Ladybug B won’t share their toys with me."
+
+    greenie "You always take my toys and damage them! I don’t want to even be near Reddie right now."
+
+    bluey  "Greenie hasn’t even returned my school notebook for a whole week! I don’t want to stay with him even for a second!"
+
+    susspidey "So I can’t leave Reddie and Greenie together or Greenie and Bluey together, but I can only take one at a time across the lake . . . what should I do? ugh . . ."
+    #hide susspidey and three ladybugs
+
+    #show susspidey at right
+    #show roachie ponder at left
+    show roachie default at left
+    roachie "Wait . . . I think I can help you."
+
+    #hide susspidey stern on right
+    #show susspidey surprised on right
+
+    
+
     # This ends the game.
     return
