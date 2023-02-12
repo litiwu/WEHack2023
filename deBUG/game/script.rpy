@@ -24,7 +24,7 @@ init:
     image bg black = Image("bg black.png")
     image susspidey = Image("spidey default.png")
     image spidey = Image("spidey default.png")
-    image ch1 = Image("ch1.png")
+    image ch1 = Image("ch1 2.png")
     image bg twohours = Image("bg twohours.jpeg")
     image bg utd = Image("bg utd.png")
     image bg lake = Image("bg lake.png")
