@@ -157,6 +157,7 @@ label start:
             "Take Reddie Across":
                 $ spideyB = True
                 $ reddieB = True
+                $ blueyB = False
                 scene bg 1100
                 pause 1
                 jump ending
@@ -170,12 +171,16 @@ label start:
             "Take Bluey Across":
                 $ spideyB = True
                 $ blueyB = True
+                $ reddieB = False
                 scene bg 1001
                 pause 1
                 jump ending
 
             "Cross Alone":
                 $ spideyB = True
+                $ reddieB = False
+                $ greenieB = False
+                $ blueyB = False
                 scene bg 1000
                 pause 1
                 jump ending 
@@ -351,23 +356,19 @@ label start:
         if reddieB and greenieB and blueyB and spideyB:
             jump end_dialogue
 
-        elif reddieB and blueyB:
+        elif reddieB == blueyB and blueyB == greenieB and spideyB != reddieB:
             show spidey tired 
-            spidey "Try again! Reddie, Greenie and Bluey can't all be together. \nTap to try again!"
+            susspidey "The ladybugs got into a fight. \nTap to try again!"
             jump game
 
-        elif reddieB:
+        elif greenieB == blueyB and spideyB != greenieB:
             show spidey tired 
-            spidey "Try again! Reddie and Greenie can't be together. \nTap to try again!"
+            susspidey "The ladybugs got into a fight. \nTap to try again!"
             jump game
 
-        elif blueyB:
+        elif reddieB == greenieB and spideyB != reddieB:
             show spidey tired 
-            spidey "Try again! Greenie and Bluey can't be together. \nTap to try again!"
-            jump game
-        elif spideyB:
-            show spidey tired 
-            spidey "Try again! Reddie, Greenie and Bluey can't all be together. \nTap to try again!"
+            susspidey "The ladybugs got into a fight. \nTap to try again!"
             jump game
         
 

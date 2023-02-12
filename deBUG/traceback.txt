@@ -1,22 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 141, in script
-    instruction "Help the spider take the three ladybugs across the lake. The spider can only take one ladybug at a time, but Reddie and Greenie can’t be left alone together and Greenie and Bluey can’t be left alone together. Choose which ladybug the spider should take across the lake."
-Exception: Sayer 'instruction' is not defined.
+  File "game/script.rpy", line 355, in script
+    show susspidey tired
+Exception: Image 'susspidey' does not accept attributes 'tired'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 141, in script
-    instruction "Help the spider take the three ladybugs across the lake. The spider can only take one ladybug at a time, but Reddie and Greenie can’t be left alone together and Greenie and Bluey can’t be left alone together. Choose which ladybug the spider should take across the lake."
-  File "C:\Users\Linh\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 881, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\Linh\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 774, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who)
-Exception: Sayer 'instruction' is not defined.
+  File "game/script.rpy", line 355, in script
+    show susspidey tired
+  File "C:\Users\Linh\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1408, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "C:\Users\Linh\Downloads\renpy-8.0.3-sdk\renpy\ast.py", line 1371, in show_imspec
+    renpy.config.show(name,
+  File "C:\Users\Linh\Downloads\renpy-8.0.3-sdk\renpy\exports.py", line 686, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "C:\Users\Linh\Downloads\renpy-8.0.3-sdk\renpy\display\image.py", line 414, in find_target
+    self.target = target._duplicate(a)
+  File "C:\Users\Linh\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 397, in _duplicate
+    args.extraneous()
+  File "C:\Users\Linh\Downloads\renpy-8.0.3-sdk\renpy\display\core.py", line 265, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'susspidey' does not accept attributes 'tired'.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 deBUG: The Last Temoc 1.0
-Sat Feb 11 23:33:36 2023
+Sun Feb 12 01:11:31 2023
