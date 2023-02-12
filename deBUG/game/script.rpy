@@ -60,7 +60,6 @@ label start:
     roachie "I really need this wish to finally be accepted as a normal software engineer, so I set out in search of Temoc, the comet."
     hide roachie default 
     hide themap
-    with fade
 
     scene ch1
     "Chapter 1: Logic Lake"
