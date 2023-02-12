@@ -9,6 +9,7 @@ define reddie = Character("Reddie", color="#d34949")
 define greenie = Character("Greenie", color="#64af67")
 define bluey = Character("Bluey", color="#559cc3")
 define spidey = Character("Spidey", color="#ac26b1") 
+define instruction = Character("Instructions", color="#232323")
 define fade = Fade(0.5, 0, 0.5)
 init:
     image roachie default = Image("roachie default.png")
@@ -138,7 +139,8 @@ label start:
     #mini game here
     label game: 
 
-        instruction "Help the spider take the three ladybugs across the lake. The spider can only take one ladybug at a time, but Reddie and Greenie can’t be left alone together and Greenie and Bluey can’t be left alone together. Choose which ladybug the spider should take across the lake."
+        instruction "Help the spider take the three ladybugs across the lake. The spider can only take one ladybug at a time, but Reddie and Greenie can’t be left alone together and Greenie and Bluey can’t be left alone together."
+        instruction "Choose which ladybug the spider should take across the lake."
 
         # booleans for logic 
         default spideyB = False
@@ -157,6 +159,7 @@ label start:
                 $ spideyB = True
                 $ reddieB = True
                 scene bg 1100
+                pause 1
                 jump ending
 
             "Take Greenie Across":
@@ -334,17 +337,17 @@ label start:
 
         elif reddieB and blueyB:
             show spidey tired 
-            spidey "Try again! Reddie, Greenie and Bluey can't all be together:( \nTap to try again!"
+            spidey "Try again! Reddie, Greenie and Bluey can't all be together. \nTap to try again!"
             jump game
 
         elif reddieB:
             show spidey tired 
-            spidey "Try again! Reddie and Greenie can't be together:( \nTap to try again!"
+            spidey "Try again! Reddie and Greenie can't be together. \nTap to try again!"
             jump game
 
         elif blueyB:
             show spidey tired 
-            spidey "Try again! Greenie and Bluey can't be together:( \nTap to try again!"
+            spidey "Try again! Greenie and Bluey can't be together. \nTap to try again!"
             jump game
 
     label end_dialogue:
