@@ -140,7 +140,6 @@ label start:
     label game: 
 
         instruction "Help the spider take the three ladybugs across the lake. The spider can only take one ladybug at a time, but Reddie and Greenie can’t be left alone together and Greenie and Bluey can’t be left alone together."
-        instruction "Choose which ladybug the spider should take across the lake."
 
         # booleans for logic 
         default spideyB = False
@@ -154,7 +153,7 @@ label start:
 
         scene bg 0000
         menu:
-
+            instruction "Choose which ladybug the spider should take across the lake."
             "Take Reddie Across":
                 $ spideyB = True
                 $ reddieB = True
@@ -184,6 +183,7 @@ label start:
         if greenieB:
             scene bg 1010
             menu:
+                instruction "Choose which ladybug the spider should take across the lake."
                 "Take Greenie Back":
                     $ greenieB = False
                     $ spideyB = False
@@ -207,6 +207,7 @@ label start:
     label round3:
         scene bg 0010 
         menu:
+            instruction "Choose which ladybug the spider should take across the lake."
             "Take Reddie Across":
                 $ spideyB = True
                 $ reddieB = True
@@ -228,6 +229,7 @@ label start:
         if reddieB: 
             scene bg 1110 
             menu: 
+                instruction "Choose which ladybug the spider should take across the lake."
                 "Take Reddie Back":
                     $ spideyB = False
                     $ reddieB = False
@@ -245,6 +247,7 @@ label start:
         elif blueyB:
             scene bg 1011 
             menu: 
+                instruction "Choose which ladybug the spider should take across the lake."
                 "Take Greenie Back":
                     $ spideyB = False
                     $ greenieB = False
@@ -263,6 +266,7 @@ label start:
         if reddieB:
             scene bg 0100
             menu: 
+                instruction "Choose which ladybug the spider should take across the lake."
                 "Take Greenie Across":
                     $ spideyB = True
                     $ greenieB = True
@@ -281,6 +285,7 @@ label start:
         elif blueyB:
             scene bg 0001
             menu: 
+                instruction "Choose which ladybug the spider should take across the lake."
                 "Take Reddie Across":
                     $ spideyB = True
                     $ reddieB = True 
@@ -299,6 +304,7 @@ label start:
     label round6:
         scene bg 1101 
         menu:
+            instruction "Choose which ladybug the spider should take across the lake."
             "Take Reddie Back":
                     $ spideyB = False
                     $ reddieB = False
@@ -317,6 +323,7 @@ label start:
     label round7:
         scene bg 0101
         menu:
+            instruction "Choose which ladybug the spider should take across the lake."
             "Take Greenie Across":
                 $ spideyB = True
                 $ greenieB = True
