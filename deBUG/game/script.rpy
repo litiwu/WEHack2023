@@ -33,6 +33,22 @@ init:
     image spidey tired = Image("spidey tired.png")
     image ladybugs crying = Image("ladybugs crying.png")
     image bg path = Image("bg path.png")
+    image bg 0000 = Image("bg mg0000.png")
+    image bg 0001 = Image("bg mg0001.png")
+    image bg 0010 = Image("bg mg0010.png")
+    image bg 0011 = Image("bg mg0011.png")
+    image bg 0100 = Image("bg mg0100.png")
+    image bg 0101 = Image("bg mg0101.png")
+    image bg 0110 = Image("bg mg0110.png")
+    image bg 1001 = Image("bg mg1001.png")
+    image bg 1010 = Image("bg mg1010.png")
+    image bg 1100 = Image("bg mg1100.png")
+    image bg 1101 = Image("bg mg1101.png")
+    image bg 1110 = Image("bg mg1110.png")
+    image bg 1111 = Image("bg mg1111.png")
+    image bg 1000 = Image("bg mg1000.png")
+    image bg 1011 = Image("bg mg1011.png")
+    
 
 
 # The game starts here.
