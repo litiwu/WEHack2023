@@ -24,6 +24,8 @@ init:
     image susspidey = Image("spidey default.png")
     image spidey = Image("spidey default.png")
     image ch1 = Image("ch1.png")
+    image bg twohours = Image("bg twohours.jpeg")
+    image bg utd = Image("bg utd.png")
 
 
 # The game starts here.
@@ -32,7 +34,7 @@ label start:
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
-    scene bg black
+    scene bg utd
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
@@ -46,6 +48,7 @@ label start:
     show roachie butterfly
     roachie "So I always really wanted to become a butterfly!"
     hide roachie butterfly
+    scene bg black
     show roachie laptop
     roachie "I searched online for a way to become a butterfly . . ."
     hide roachie laptop
@@ -56,6 +59,7 @@ label start:
     roachie "What's this?"
     "{color=#b52b16}{i}A life filled with regret . . . can be solved by a magic comet. Follow the map to unlock . . . one wish to be granted by Temoc.{/i}{/color}"
     hide themap
+    scene bg utd
     show roachie default
     roachie "I really need this wish to finally be accepted as a normal software engineer, so I set out in search of Temoc, the comet."
     hide roachie default 
@@ -65,8 +69,11 @@ label start:
     "Chapter 1: Logic Lake"
 
     scene bg black
+    show themap
 
     roachie "The first location on the map was Logic Lake, just a few miles east."
+
+    hide themap
     
     scene bg twohours
     roachie "{color=#0373fc}{i}After Two Hours{/i}{/color}"
