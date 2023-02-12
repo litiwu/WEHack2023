@@ -31,6 +31,7 @@ init:
     image spidey happy = Image("spidey happy.png")
     image spidey surprised = Image("spidey surprised.png")
     image spidey tired = Image("spidey tired.png")
+    image ladybugs crying = Image("ladybugs crying.png")
 
 
 # The game starts here.
@@ -89,7 +90,7 @@ label start:
     roachie "What's going on over there?"
     hide roachie default
     show spidey tired at left
-    #show three ladybugs at right
+    show ladybugs crying at right
     roachie "{color=#0373fc}{i}At the lake, I saw a suspicious spider arguing with three young ladybugs.{/i}{/color}"
     roachie "{color=#0373fc}{i}I should go check if the ladybugs aren't being harassed.{/i}{/color}"
 
@@ -103,10 +104,9 @@ label start:
 
     susspidey "So I can’t leave Reddie and Greenie together or Greenie and Bluey together, but I can only take one at a time across the lake . . . what should I do? ugh . . ."
     hide spidey tired
-    #hide three ladybugs
+    hide ladybugs crying
 
     show spidey tired at right
-    #show roachie ponder at left
     show roachie default at left
     roachie "Wait . . . I think I can help you."
 
@@ -119,6 +119,8 @@ label start:
     hide roachie default
 
     #mini game here
+
+    label end_dialogue:
     
     scene bg lake
     show spidey happy

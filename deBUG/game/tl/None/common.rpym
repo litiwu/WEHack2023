@@ -58,8 +58,8 @@ translate None strings:
     new "Default"
 
     # renpy/common/00accessibility.rpy:146
-    old "DejaVu Sans"
-    new "DejaVu Sans"
+    old "ArchitectsDaughter-Regular.ttf"
+    new "ArchitectsDaughter-Regular.ttf"
 
     # renpy/common/00accessibility.rpy:150
     old "Opendyslexic"
