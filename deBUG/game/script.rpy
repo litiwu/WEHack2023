@@ -171,12 +171,14 @@ label start:
                 $ spideyB = True
                 $ blueyB = True
                 scene bg 1001
+                pause 1
                 jump ending
 
             "Cross Alone":
                 $ spideyB = True
                 scene bg 1000
-                jump round2 
+                pause 1
+                jump ending 
 
     label round2:
 
@@ -243,6 +245,7 @@ label start:
                 "Cross Back Alone": 
                     $ spideyB = False
                     scene bg 0110
+                    pause 1
                     jump ending
         elif blueyB:
             scene bg 1011 
@@ -261,6 +264,7 @@ label start:
                 "Cross Back Alone": 
                     $ spideyB = False
                     scene bg 0011
+                    pause 1
                     jump ending
     label round5:
         if reddieB:
@@ -280,6 +284,7 @@ label start:
                 "Cross Alone":
                     $ spideyB = True
                     scene bg 1100
+                    pause 1
                     jump ending
 
         elif blueyB:
@@ -299,6 +304,7 @@ label start:
                 "Cross Alone":
                     $ spideyB = True
                     scene bg 1001
+                    pause 1
                     jump ending
 
     label round6:
@@ -328,6 +334,7 @@ label start:
                 $ spideyB = True
                 $ greenieB = True
                 scene bg 1111
+                pause 1
                 jump ending
             "Cross Alone": 
                 $ spideyB = True
@@ -339,6 +346,8 @@ label start:
 
         scene bg lake
 
+        
+        
         if reddieB and greenieB and blueyB and spideyB:
             jump end_dialogue
 
@@ -356,47 +365,72 @@ label start:
             show spidey tired 
             spidey "Try again! Greenie and Bluey can't be together. \nTap to try again!"
             jump game
+        elif spideyB:
+            show spidey tired 
+            spidey "Try again! Reddie, Greenie and Bluey can't all be together. \nTap to try again!"
+            jump game
+        
 
     label end_dialogue:
     
     scene bg lake
     show spidey happy
+
     susspidey "Thank you so much, cockroach. My kids were being so difficult, but you were able to get them across safely."
+    
     hide spidey happy
     show roachie default
+
     roachie "Your kids?"
+
     hide roachie default
     show spidey
+
     spidey "Yes! I am their adoptive parent, and I was dropping them off at the daycare. My name is Spidey."
+
     hide spidey
     scene bg black
     show spidey
+
     roachie "{color=#0373fc}{i}Wow, I thought spiders were cold and uncaring, but I was making assumptions.{/i}{/color}"
+
     hide spidey
     scene bg lake
     show spidey
+
     spidey "What's your name?"
+
     hide spidey
     show roachie default
+
     roachie "I'm Roachie, and I'm a software engineering student."
+
     hide roachie default
     scene bg black
     show roachie default
+
     spidey "{color=#0373fc}{i}I never thought cockroaches could ever become software engineers, but I changed my mind. I didn’t know cockroaches could be so smart!{/i}{/color}"
+    
     hide roachie default
     scene bg lake
     show spidey surprised
+
     spidey "Oh my! You definitely have the brains to become a successful software engineer. Why are you traveling all the way out here?"
+    
     hide spidey surprised
     show roachie default
+
     roachie "{color=#0373fc}{i}Spidey believes I can become a software engineer as a cockroach?{/i}{/color}"
     roachie "Oh . . . I'm trying to find the magic Temoc to grant my wish."
+
     hide roachie default
     show roachie default at left 
     show spidey at right
+
     spidey "Let me come and help you. I’m indebted to you for helping us cross the lake."
     roachie "{color=#0373fc}{i}Hmmm. I am still pretty scared of spiders, but maybe I’m wrong about them . . .{/i}{/color}"
     roachie "Thanks for helping! Next, we have to go to Python Pit."
+
     hide roachie default
     hide spidey 
     scene bg path
